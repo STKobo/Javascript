@@ -47,3 +47,24 @@ console.log(displayAges);
 
 
 
+//objets 
+
+let planeTrip = new Object();
+
+console.log(planeTrip);
+
+let movie = {};
+
+class Dog {
+  constructor(age, name, race, color, goodBoy) {
+    this.age = age; 
+    this.name = name; 
+    this.race = race; 
+    this.color = color; 
+    this.goodBoy = goodBoy;
+  }
+}
+
+let myDog = new Dog(3, 'Fluffy', 'Bichon', 'White', true); 
+
+
