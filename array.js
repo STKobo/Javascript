@@ -43,3 +43,26 @@ const movieTitles = movies.map(movie => {
 });
 
 console.log(movieTitles); 
+console. log('---------');
+
+const cart = [
+    {
+    designation: 'Pomme',
+    unitPrice: 0.85, 
+    units: 6,
+    },
+    {
+    designation: 'Chou-fleur',
+    unitPrice: 0.97, 
+    units: 2,
+    },
+    {
+    designation: 'Orange',
+    unitPrice: 1.15, 
+    units: 4,
+    }
+]
+
+console.log(
+    cart.reduce((accumulator.currentValue) => accumulator + currentValue.unitPrice * currentValue.units, 0)
+);
