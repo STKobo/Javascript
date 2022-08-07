@@ -1,70 +1,36 @@
-function a() {
-  b();
-}
-
-function b() {
-  console.log('Hello, from b');
-}
-
-a();
-
-// a appelle b et affiche donc le message 'Hello from b 
-
-
-function countDown(timeleft){
-  console.log(timeleft);
-  timeleft--;
-  
-  if (timeleft > 0) {
-    return countDown(timeleft);
-  }
-  
- console.log('Le repas est prêt!');
-  return true; 
-} 
-
-countDown(10);
-
-//Voit le compteur et voit qu'on sort de l'appel récursif 
-
-
-const coworkerAges = [48, 24, 35, 22, 41, 39];
-
-function sortNumber(a, b) {
-  return a - b;
-}
-
-const sortedAges = coworkerAges.sort(sortNumber); 
-console.log(sortedAges); 
-
-//[22, 24, 35, 39, 41 , 48]
-
-const displayAges = sortedAges.map((sortedAge) => {
-  return '${sortedAge} ans';
-});
-
-console.log(displayAges);
-
-
-
-//objets 
-
-let planeTrip = new Object();
-
-console.log(planeTrip);
-
-let movie = {};
-
-class Dog {
-  constructor(age, name, race, color, goodBoy) {
-    this.age = age; 
-    this.name = name; 
-    this.race = race; 
-    this.color = color; 
-    this.goodBoy = goodBoy;
-  }
-}
-
-let myDog = new Dog(3, 'Fluffy', 'Bichon', 'White', true); 
-
-
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>Tri par ordre alphabétique</title>
+  </head> 
+  <body></body>
+  <script>
+  // tableau de noms
+  const data = ['Paul', 'Jean', 'Marie', 'Nicolas', 'Julie', 'Lola', 'Martin', 'Armand', 'Amandine'];
+  // tableau de stockage de l'objet {letter: '', names: ['']}
+  const dataSorted = [];
+  // tri du tableau data par ordre alphabétique
+  data.sort(function(a, b) {
+    return a - b;
+  });
+  // POUR CHAQUE nom du tableau data
+  data.forEach(function(name) {
+    // On recherche s'il existe une valeur de la propriété letter égale à la premiere lettre du nom
+    // Si une des valeur de la propriété letter est égale à la premiere lettre du nom on retourne l'index sinon on retourne -1
+    const indexLetter = dataSorted.findIndex(function(objet) {
+      return name.substring(0, 1).toLocaleLowerCase() === objet.letter.toLocaleLowerCase();
+    });
+    // Si l'index est différent de -1
+    if (indexLetter !== -1) {
+      // On ajoute le nom au tableau de la propriété names correspondant à l'index de dataSorted
+      dataSorted[indexLetter].names.push(name);
+    // Sinon
+    } else {
+      // On ajoute l'objet {letter: name.substring(0, 1), names: [name]} à dataSorted
+      dataSorted.push({letter: name.substring(0, 1), names: [name]});
+    }
+  })
+  console.log(dataSorted)
+  </script>
+</html>
