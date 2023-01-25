@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS 1</title>
+</head>
+<body>
+
+    <h1>C'est le J</h1>
+
+    <button onclick="disBonjour()">Il a pas dit Bonjour</button>
+    
+    <button onclick="utiliseLesSelecteurs()">Les sélecteurs</button>
+    
+    <input name="monNom">
+
+    <div id="noeud">
+        <p>
+            <i class="maClasse">Italique</i>
+        </p>
+    </div>
+
+    <div id="noeud">
+        <p>
+            <b class="maClasse">Gras</b>
+        </p>
+    </div>
+
+    <fieldset style="margin-top: 30px;">
+        <legend>Changement de texte</legend>
+
+        <input id="leTexteARecuperer" type="text" placeholder="Votre texte...">
+
+        <button onclick="remplaceLeTexte()">Remplacer</button>
+
+        <p id="leTexteARemplacer">
+            Vous pouvez remplacer le texte ici via le bouton ci-dessus.
+        </p>
+    </fieldset>
+    
+    <fieldset style="margin-top: 30px;">
+        <legend>wysiwyg</legend>
+        <label>Titre</label>
+        <input type="text" id="tireWysiwyg">
+
+        <div>
+            <button id="btnGenererWysiwyg">Générer</button>
+        </div>
+    </fieldset>
+
+    <div id="resultatWysiwyg">
+        <h2 id="titreWysiwygResultat">Titre du wysiwyg</h2>
+    </div> 
+
+    <script src="script.js"></script>
+
+
+</body>
+</html>

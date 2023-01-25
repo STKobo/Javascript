@@ -57,7 +57,11 @@
         try {
                 promptRectangle()
             } catch (e) {
-                console.log(e.message, e)
+                if(e instanceof PromptError) {
+                    console.log('PromptError')
+                }else {
+                    console.log('Erreur')
+                }
             }
 
         
