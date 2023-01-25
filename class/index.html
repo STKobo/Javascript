@@ -12,9 +12,14 @@
 
         class  Student {
             ecole = 'Jules ferry'
+
+            constructor (firstname, lastname) {
+                this.firstname = firstname 
+                this.lastname = lastname
+            }
         }
 
-        const tom = new Student()
+        const tom = new Student('Tom', 'Soul')
         console.log(tom)
 
     </script>
