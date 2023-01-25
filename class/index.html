@@ -36,16 +36,30 @@
             }
         }
 
-        try {
+
+
+        function promptRectangle(){
+            try {
             const width = parseInt(prompt ('Largeur'), 10)
             const height = parseInt(prompt ('Hauteur'), 10)
             const r = new Rectangle(width, height)
-            console.log(r.perimeter)
+            return r
 
 
-        } catch (e){
-            console.log('Impossible de construire le rectangle')
+            } catch (e){
+                throw new Error('Entrée utilisateur invalide', {cause: {code: 404, url: 'https://grafikart.fr'}})
+                console.log('Impossible de construire le rectangle')
+            }
+            
+         
         }
+
+        try {
+                promptRectangle()
+            } catch (e) {
+                console.log(e.message, e)
+            }
+
         
     </script>
     
