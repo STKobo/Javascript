@@ -17,10 +17,18 @@
                 this.firstname = firstname 
                 this.lastname = lastname
             }
+
+            setNotes (notes) {
+                this.notes = notes
+            }
+
+           
         }
 
         const tom = new Student('Tom', 'Soul')
         const jane = new Student('Jane', 'Soul')
+        john.setNotes([10, 10, 9])
+        jane.setNotes([15, 18, 19])
         console.log(tom, jane)
 
     </script>
