@@ -1,11 +1,24 @@
-const assert = require ('assert'); 
-const { describe, it } = require('node:test');
-
-
-describe('Array', function(){
-    describe('IndexOf', function(){
-        it('should return -1 when the value is not prevent', function (){
-            assert.equal([1, 2, 3].indexOf(4), -1);
-        });
-    });
-});
+function valueAge (age) {
+   if (isNaN(age)){
+            return false
+    }
+   if (age < 18 ){
+        return false 
+    }
+    return true
+    } 
+    function testAge (input, result) {
+    if (valueAge(input) === result){
+    console.log(`Test réussi pour ${input}`)
+    return true
+    }
+    else {
+        console.log(`Test échoué pour ${input}`)
+            return false
+    }
+    }
+    testAge(25, true) 
+    testAge('nano', false) 
+    testAge(12, false) 
+    testAge(5, true) 
+    
