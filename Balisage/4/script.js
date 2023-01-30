@@ -13,3 +13,25 @@ for (let index = 0; index < prices.length; index++){
     
 }
 console.log("Mes nouveaux prix sont " + pricesPromo)
+
+
+const mag = [
+    {
+        name : "pantalon A",
+        price : 50
+    }, 
+    {
+        name : "veste B",
+        price : 100
+    },
+    {
+        name: "chaussure C",
+        price : 150
+    }
+]
+
+for (let index = 0 ; index < mag.length ; index++){
+    const priceWithPromo  = mag[index].price / 2
+    mag[index].promo = priceWithPromo;
+}
+console.table(mag)
